@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np 
 from sklearn.preprocessing import LabelEncoder,StandardScaler,MinMaxScaler,PowerTransformer
-# import add_steps
+import add_steps
+
 class data_:
 	
 	
@@ -42,7 +43,7 @@ class data_:
 	def fillna(self,df,column):
 
 		
-		df[column].fillna("Uknown",inplace=True)
+		df[column].fillna(0, inplace=True)
 		return df[column]
 
 	def fillmean(self,df,column):
